@@ -11,7 +11,7 @@ spec:
       app: postgres-replica
 
   serviceName: postgres-replica
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
@@ -137,6 +137,7 @@ spec:
   - metadata:
       name: postgres-replica
     spec:
+      storageClassName: "csi-ceph-ssd-gz1-retain"
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:

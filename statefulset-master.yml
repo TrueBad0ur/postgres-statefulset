@@ -121,6 +121,7 @@ spec:
   - metadata:
       name: postgres
     spec:
+      storageClassName: "csi-ceph-ssd-gz1-retain"
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
