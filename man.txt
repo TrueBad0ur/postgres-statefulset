@@ -1,0 +1,3 @@
+kubectl exec --stdin --tty postgres-client -- sh
+master: psql -h postgres-0.postgres.default.svc.cluster.local -d postgres -U postgres
+read-only replica: psql -h postgres-replica-0.postgres-replica.default.svc.cluster.local -d postgres -U postgres
